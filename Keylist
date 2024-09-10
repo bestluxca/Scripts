@@ -1,0 +1,69 @@
+valid_keylist = ["1"]
+
+blacklisted_keylist = ["123", "vungockhanh"]
+
+key_file = "key.txt"
+
+print(Fore.GREEN + "Đây Là Discord Của Axionix: https://discord.gg/C6VaVKsapN" + Style.RESET_ALL)
+print(Fore.GREEN + "Chúc Mọi Người Có Một Trải Nghiệm Vui Vẻ Nhé" + Style.RESET_ALL)
+print(Fore.RED + "Copyright By Axionix" + Style.RESET_ALL)
+
+if os.path.exists(key_file):
+    with open(key_file, "r") as file:
+        script_key = file.read().strip()
+        print(Fore.GREEN + f"Running Saved Key: {script_key}")
+else:
+    script_key = input(Fore.YELLOW + "Please Enter Your Key: " + Style.RESET_ALL)
+    with open(key_file, "w") as file:
+        file.write(script_key)
+        print(Fore.GREEN + f"Key Saved In: {key_file} File.")
+
+is_valid = False
+is_blacklisted = False
+
+if script_key in blacklisted_keylist:
+    is_blacklisted = True
+
+if not is_blacklisted:
+    if script_key in valid_keylist:
+        is_valid = True
+
+if is_blacklisted:
+    print("Whitelist...") 
+    print("Whitelist...")
+    print("Whitelist...")
+    print("Please Wait While We Whitelist Your Key...") 
+    print("Whitelist...") 
+    print("Whitelist...")
+    print("Whitelist...")
+    print("Whitelist Done")
+    print("Invalid Key, Please Check And Try Again Later")
+    print("Invalid Key, Please Check And Try Again Later")
+    print("Invalid Key, Please Check And Try Again Later")
+    print("You Can't Use This Script For This Reason: Your Key Is Blacklisted")
+    exit()
+elif is_valid:
+    print("Whitelist...") 
+    print("Whitelist...")
+    print("Whitelist...")
+    print("Please Wait While We Whitelist Your Key...") 
+    print("Whitelist...") 
+    print("Whitelist...")
+    print("Whitelist...")
+    print("Whitelist Done")
+    print("Valid Key, Correct Key And Your Key Is Fine")
+    print("You Can Use This Script For This Reason: Your Key Is Fine")
+    print("Thank You For Using Our Script")
+else:
+    print("Whitelist...") 
+    print("Whitelist...")
+    print("Whitelist...")
+    print("Please Wait While We Whitelist Your Key...") 
+    print("Whitelist...") 
+    print("Whitelist...")
+    print("Whitelist...")
+    print("Whitelist Done")
+    print("Invalid Key, Please Check And Try Again Later")
+    print("You Can't Use This Script For This Reason: Your Key Is Invalid")
+    exit()
+
